@@ -18,7 +18,7 @@ https://www.geeksforgeeks.org/turning-a-function-pointer-to-callable/
 
 ntdll = ctypes.windll.LoadLibrary('ntdll')
 priv = ctypes.cast(ntdll.RtlAdjustPrivilege, ctypes.c_void_p).value
-BSoD = ctypes.cast(ntdll.NtRaiseHardError, ctypes.c_void_p).value
+bsod = ctypes.cast(ntdll.NtRaiseHardError, ctypes.c_void_p).value
 #print("priv mem addr: ", priv)
 #print("\nBSoD mem addr: ", BSoD)
 
@@ -33,7 +33,7 @@ deepstate = ctypes.byref(state())
 dwsize = ctypes.byref(size())
 
 AdjustPriv = functype(priv)
-RaiseError = functype(BSoD)
+RaiseError = functype(bsod)
 
 '''
  NTSTATUS RtlAdjustPrivilege
