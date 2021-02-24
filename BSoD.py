@@ -1,6 +1,5 @@
 import ctypes
 from ctypes import wintypes
-from enum import Enum
 
 SeShutdownPrivilege = 19
 OptionShutdownSystem = 6
